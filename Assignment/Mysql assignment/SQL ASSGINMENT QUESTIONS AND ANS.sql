@@ -12,8 +12,11 @@
 
 -- Q1 DISPLAY ALL INFORMATION IN THE TABLE EMP AND DEPT .
 
-SELECT*FROM employees ;
-select*from departments ;
+select departments.department_id, departments.department_name, employees.first_name, 
+employees.last_name,employees.email, employees.employee_id
+from departments
+left join employees on departments.department_id = employees.department_id ;
+
 
 -- Q2 DISPLAY ONLY THE HIRE DATE EMPLOYEE NAME FOR EACH EMPLOYEE.
  
